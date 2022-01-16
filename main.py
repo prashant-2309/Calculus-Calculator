@@ -42,8 +42,6 @@ def myclick(number):
         position = disp.index(INSERT)
         disp.icursor(position - 1)
 
-
-
 def equalclick(*args):
     global bruh
     findsolof=disp.get()
@@ -57,13 +55,6 @@ def equalclick(*args):
     disp.delete(0,END)
     disp.insert(0,str(solution))
         
-    
-
-
-
-
-
-
 def more_click():
     global statustrig
     statustrig=4
@@ -110,16 +101,8 @@ def more_click():
             trigokey[13].grid(row=5,column=5)
             trigokey[14].grid(row=5,column=6)
             moretrigger=1
-
-
-
     return
-
-
-
-
-
-
+   
 def trigo():
     global randofunc
     global statustrig
@@ -160,12 +143,7 @@ def trigo():
     statustrig=1
     moretrigger=1
     print(statustrig)
-
-
     
-
-
-
 def calcu():
     global statustrig
     if statustrig==1:
@@ -201,13 +179,7 @@ def calcu():
 
     statustrig=2
     print(statustrig)
-    
-
-
-
-
-
-    
+        
 def clear(*args):
     global statustrig
     global disp
@@ -239,12 +211,7 @@ def clear(*args):
     moretrigger=0
     statustrig=0
     print(statustrig)
-   
-
-
-
-
-
+  
 def delete():
     pos = len(disp.get())
     display = str(disp.get())
@@ -258,35 +225,15 @@ def delete():
         disp.delete(0, END)
         disp.insert(0, display[0:pos-1])
 
-
-
-
-
-
-
-
-
-
-
-
-
 def key_event(*args):
     if disp.get() == '0':
         disp.delete(0, END)
 
-
-
-
 for z in range (0,11):
     numkey[z]=Button(root,text=numkey_text[z], font="Segoe 21", relief=GROOVE, bd=0 ,fg="white", bg="BLACK",width=a,height=h,command = lambda z=z :myclick(numkey_text[z]))
 
-
-
-
 disp = Entry(root, font="Verdana 22", fg="black", bg="#abbab1", bd=0, justify=LEFT,cursor="arrow",width=22)
 disp.grid(row=0,column=0,columnspan=8,sticky="news",ipady=8)
-
-
 
 disp.bind("<Return>",equalclick)
 disp.bind("<Key-Delete>",clear)
@@ -307,10 +254,6 @@ disp.focus_set()
 
 if disp.get() == '0':
         disp.delete(0, END)
-
-
-
-
 
 simple=Button(root,text="CE", font="Segoe 21", relief=GROOVE, bd=0 ,fg="white", bg="#333333",width=8,command=clear)
 trignometry=Button(root,text="sine", font="Segoe 21", relief=GROOVE, bd=0 ,fg="white", bg="#333333",width=8,command=trigo)
